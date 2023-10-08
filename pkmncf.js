@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         pkmncf
 // @namespace    https://pokemon-cafe.jp
-// @version      0.8
+// @version      0.9
 // @description  for cafe enjoyers
 // @author       Me
 // @match        https://reserve.pokemon-cafe.jp
@@ -63,7 +63,7 @@
     if (window.location.href.indexOf("reserve/step2") > 0) {
         const seatSelector = `div[contains(@class, "seattypetext") and (${TABLE_TYPES.map(t => `text()="`+t+`席"`).join(" or ")})]`
         const timeSelector = `div[contains(@class, "timetext") and (${BOOKING_TIMES.map(t => `text()="`+t+`~"`).join(" or ")})]`
-        const statusSelector = `div[contains(@class, "status-box") and (div[text()="Full"])]`
+        const statusSelector = `div[contains(@class, "status-box") and not(div[text()="Full"])]`
         const selector = [seatSelector, timeSelector, statusSelector].join(" and ")
 
         let seats = document.evaluate(`//*/div[${selector}]`, document.body)
