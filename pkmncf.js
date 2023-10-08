@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         pkmncf
 // @namespace    https://pokemon-cafe.jp
-// @version      0.2
+// @version      0.3
 // @description  for cafe enjoyers
 // @author       Me
 // @match        https://reserve.pokemon-cafe.jp
@@ -12,11 +12,16 @@
 
 (function() {
     'use strict';
-    const NUMBER_OF_GUESTS = 2
+    const NUMBER_OF_GUESTS = 0
     const BOOKING_MONTH = 11
     const BOOKING_DATE = 8
     const BOOKING_TIMES = ["14:35", "14:50"] //acceptable booking times
     const TABLE_TYPES = ["A", "B"] //acceptable table types (A/B/C are table (2-8 ppl), D is counter (2 ppl)
+
+    if (NUMBER_OF_GUESTS == 0) {
+        alert("Update settings before using this script (Dashboard > pkmncf > Edit lines 15-19")
+        return
+    }
 
     if (window.location.href.endsWith(".jp/")) {
         document.querySelector(`[href="/reserve/agree"]`).click()
