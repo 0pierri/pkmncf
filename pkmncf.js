@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         pkmncf
 // @namespace    https://pokemon-cafe.jp
-// @version      0.5
+// @version      0.6
 // @description  for cafe enjoyers
 // @author       Me
 // @match        https://reserve.pokemon-cafe.jp
@@ -72,6 +72,6 @@
         seats.iterateNext().click() //Always try first slot, if it fails it'll be full after refresh
 
         //assuming navigation happens here, if no navigation after 2s refresh
-        setTimeout(_ => {window.location.href = window.location.href}, 5000)
+        setTimeout(_ => {window.location.href = "/reserve/agree"}, 5000)
     }
 })();
