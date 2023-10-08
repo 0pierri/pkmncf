@@ -1,14 +1,12 @@
 // ==UserScript==
 // @name         pkmncf
 // @namespace    https://pokemon-cafe.jp
-// @version      0.6
+// @version      0.7
 // @description  for cafe enjoyers
 // @author       Me
 // @match        https://reserve.pokemon-cafe.jp
 // @match        https://reserve.pokemon-cafe.jp/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=pokemon-cafe.jp
-// @grant        GM_setValue
-// @grant        GM_getValue
 // ==/UserScript==
 
 (function() {
