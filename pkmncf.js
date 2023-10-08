@@ -29,8 +29,14 @@
     }
 
     if (window.location.href.indexOf("reserve/agree") > 0) {
+        let timeout = 0;
+        if (document.querySelector(`p.alert`)) {
+            timeout = 5000;
+        }
+        setTimeout(_ => {
         document.querySelector(`input#agreeChecked`).click()
         document.querySelector(`input[type="submit"]`).click()
+        }, timeout)
     }
 
     if (window.location.href.indexOf("auth_confirm") > 0) {
